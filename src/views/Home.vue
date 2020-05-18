@@ -1,18 +1,41 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="Vue logo" src="../assets/logo.png" @click="this.notify" />
+    <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
     HelloWorld
+  },
+  methods: {
+    notify() {
+      if ("Notification" in window) {
+        this.requestPermissionNotification();
+        if (Notification.permission === "granted") {
+          this.sendNotification("hello");
+        } else if (Notification.permission === "denied") {
+          this.noAuthorizeNotification();
+        }
+      }
+    },
+    requestPermissionNotification() {
+      Notification.requestPermission();
+    },
+    sendNotification(message) {
+      new Notification(message);
+    },
+    noAuthorizeNotification() {
+      alert(
+        "si vous voulez recevoir une notification, autoriser la notification dans les parametres de votre navigateur"
+      );
+    }
   }
-}
+};
 </script>
