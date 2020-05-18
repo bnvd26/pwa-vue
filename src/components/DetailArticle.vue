@@ -11,7 +11,7 @@
         data-share-text="User vous partage cet article"
       />
       <div v-if="!isCopied">
-        <p @click="this.getEle">Copié</p>
+        <p @click="this.copyLink">Copié</p>
       </div>
       <div v-else>
         <p>Element copié</p>
@@ -29,7 +29,7 @@ export default {
     };
   },
   methods: {
-    getEle() {
+    copyLink() {
       if (navigator.clipboard) {
         let url = document.getElementById("url");
         navigator.clipboard
