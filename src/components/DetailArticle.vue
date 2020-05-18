@@ -10,7 +10,7 @@
         data-share-title="Titre de l'article"
         data-share-text="User vous partage cet article"
       />
-      <div @click="this.shareArticle">Partager</div>
+      <div @click="this.shareArticle" v-if="sharing">Partager</div>
       <div v-if="!isCopied">
         <p @click="this.copyLink">Copié</p>
       </div>
@@ -26,8 +26,17 @@ export default {
   name: "DetailArticle",
   data: function() {
     return {
-      isCopied: false
+      isCopied: false,
+      sharing: null
     };
+  },
+  mounted: function() {
+    // Verfy if current navigator support Web Share API
+    if (navigator.share) {
+      this.sharing = true;
+    } else {
+      this.sharing = false;
+    }
   },
   methods: {
     copyLink() {
