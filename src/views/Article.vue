@@ -1,9 +1,13 @@
 <template>
-  <div class="home">Article numéro {{ $route.params.id}}</div>
+  <DetailArticle />
 </template>
 
 <script>
+import DetailArticle from "@/components/DetailArticle.vue";
 export default {
-  name: "Article"
+  name: "Article",
+  components: {
+    DetailArticle
+  }
 };
 </script>
