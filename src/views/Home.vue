@@ -15,7 +15,6 @@ export default {
   },
   methods: {
     notify() {
-      console.log(window);
       if ("Notification" in window) {
         this.requestPermissionNotification();
         if (Notification.permission === "granted") {
@@ -29,7 +28,7 @@ export default {
       Notification.requestPermission();
     },
     sendNotification(message) {
-      new Notification(message);
+      return new Notification(message);
     },
     noAuthorizeNotification() {
       alert(
