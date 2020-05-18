@@ -10,7 +10,7 @@
         data-share-title="Titre de l'article"
         data-share-text="User vous partage cet article"
       />
-      <div @click="this.shareArticle" v-if="sharing">Partager</div>
+      <div @click="this.shareArticle">Partager</div>
       <div v-if="!isCopied">
         <p @click="this.copyLink">Copié</p>
       </div>
@@ -26,14 +26,8 @@ export default {
   name: "DetailArticle",
   data: function() {
     return {
-      isCopied: false,
-      sharing: null
+      isCopied: false
     };
-  },
-  computed: {
-    fireMethod: function() {
-      return this.sharingIsAvailable();
-    }
   },
   methods: {
     copyLink() {
@@ -61,13 +55,6 @@ export default {
         alert(
           "Veuillez changer de navigateur pour profiter de cette fonctionalité (Safari, Chrome for Android)"
         );
-      }
-    },
-    sharingIsAvailable() {
-      if (navigator.share) {
-        this.sharing = true;
-      } else {
-        this.sharing = false;
       }
     }
   }
