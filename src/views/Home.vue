@@ -1,18 +1,13 @@
 <template>
   <div class="home">
     <p @click="this.notify">Notify me</p>
-    <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
 
 <script>
-import HelloWorld from "@/components/HelloWorld.vue";
-
 export default {
   name: "Home",
-  components: {
-    HelloWorld
-  },
+  components: {},
   methods: {
     notify() {
       if ("Notification" in window) {
