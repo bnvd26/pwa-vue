@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <p @click="this.notify">Notify me</p>
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
@@ -14,6 +15,7 @@ export default {
   },
   methods: {
     notify() {
+      console.log(window);
       if ("Notification" in window) {
         this.requestPermissionNotification();
         if (Notification.permission === "granted") {
