@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="article">
     Article numéro {{ $route.params.id}}
     <div>
       <input
@@ -18,8 +18,67 @@
         <p>Element copié</p>
       </div>
     </div>
+     <div class="articleContenaire">
+      <h2> L'excellence à la française</h2>
+      <div class="imageHolder">
+        <div class="singleCar">
+          <img alt="arrow" src="../assets/image1.png" class="firstCar" >
+        </div>
+ 
+        <div class="deusCar">
+          
+          <div><img alt="arrow" src="../assets/image8.png" class="secondCar" ></div>
+          <div><img alt="arrow" src="../assets/image7.png" class="thirdCar" ></div>
+       
+        </div>
+       
+      </div>
+      <div class="textBox">
+       <p>Lorem ipsum dolor sit amet, consectetur  <br>adipiscing elit, Lorem ipsum dolor sit amet, <br> nfnoilk knezan n  njnfrz ofn njnv zonrfv nklz<br> nrklzfqknc onlj fnlk fznjlgv soj ln qfkln sglgzn<br>  k:g;nzolkn nklag n  neqnr lnfelrn ferng nhn ioqglkn n an onfong</p>
+      </div>
+    </div>
   </div>
+  
 </template>
+
+<style>
+.article{
+  width: 100%;
+ /*  background: yellow; */
+  margin-top:100px;
+}
+  .articleContenaire{
+    width: 100%;
+   /*  background:lightcoral; */
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+  .imageHolder{
+    width: 100%;
+    display : flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+  }
+  .singleCar{
+   margin-top: -20px;
+   
+  }
+
+  .deusCar{
+    margin-left: -50px; 
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .secondCar{
+   margin-bottom: 40px;
+  }
+
+</style>
+
 
 <script>
 export default {

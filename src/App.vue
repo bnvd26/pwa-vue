@@ -32,14 +32,15 @@
 
 
   .header{
-    width: 100%; 
+
     display: flex; 
     flex-direction: row;
     align-content: center;
-    padding:  30px  30px  0 30px;
+    padding:  30px  0 0 0;
   }
  .logo{ 
     margin-left: 35px;
+    margin-right: 30%;
  } 
   button{
     background: #1B7FF3;
@@ -50,6 +51,7 @@
     height: 50px;
     border-radius: 50px;
     padding: 2px;
+    outline: none;
     
   }
   .buttonArticle{
@@ -86,24 +88,19 @@
    
   }
 
-#nav {
-  position: absolute;
-  margin-top: 20px;
-  overflow: hidden;
-  display: flex; 
-  flex-direction: row;
-  align-content: center;
-  margin-left: 60%;
-  margin-right: 10%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
+  #nav {
+   
+    overflow: hidden;
+    display: flex; 
+    flex-direction: row;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  #nav a {
+    font-weight: bold;
+    color: #2c3e50;
+  }
 
 #nav a.router-link-exact-active {
   color: #42b983;
