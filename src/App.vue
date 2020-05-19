@@ -17,6 +17,31 @@
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      online: navigator.onLine
+    };
+  },
+  methods: {
+    updateOnlineStatus(e) {
+      const { type } = e;
+      this.online = type === "online";
+    }
+  },
+
+  mounted() {
+    window.addEventListener("online", this.updateOnlineStatus);
+    window.addEventListener("offline", this.updateOnlineStatus);
+  },
+  beforeDestroy() {
+    window.removeEventListener("online", this.updateOnlineStatus);
+    window.removeEventListener("offline", this.updateOnlineStatus);
+  }
+};
+</script>
+
 <style>
 #app {
   width: 100%;
