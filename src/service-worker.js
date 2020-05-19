@@ -2,6 +2,8 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
+// Register routes to put in cache 
+
 workbox.routing.registerRoute(
 	new RegExp("https://jsonplaceholder.typicode.com/(.*)"),
 	new workbox.strategies.CacheFirst({
@@ -30,6 +32,8 @@ workbox.routing.registerRoute(
 	}),
 );
 
+// Redirect on my website on notification click
+
 self.addEventListener("notificationclick", (event) => {
 	event.notification.close();
 
@@ -37,3 +41,17 @@ self.addEventListener("notificationclick", (event) => {
 
 	event.waitUntil(promiseChain);
 });
+
+// Background Sync
+
+workbox.routing.registerRoute(
+	"https://jsonplaceholder.typicode.com/posts",
+	workbox.strategies.networkOnly({
+		plugins: [
+			new workbox.backgroundSync.Plugin("postQueue", {
+				maxRetentionTime: 24 * 60,
+			}),
+		],
+	}),
+	"POST",
+);
