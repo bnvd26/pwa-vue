@@ -29,3 +29,11 @@ workbox.routing.registerRoute(
 		],
 	}),
 );
+
+self.addEventListener("notificationclick", (event) => {
+	event.notification.close();
+
+	const promiseChain = clients.openWindow("https://pwa-vue.netlify.app");
+
+	event.waitUntil(promiseChain);
+});
