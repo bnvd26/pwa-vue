@@ -45,7 +45,10 @@ export default {
           setTimeout(() => {
             this.postCreated = false;
           }, 1000)
-        );
+        )
+        .catch(err => {
+          console.log("Unable to Post Data", err);
+        });
     },
     sendNotification(title, message) {
       if ("Notification" in window && Notification.permission === "granted") {
