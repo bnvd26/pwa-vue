@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <p @click="this.notify">Notify me</p>
     <h1>Ecrire un post</h1>
     <div v-if="postCreated">
       <AlertFlashMessage />
@@ -26,16 +25,6 @@ export default {
     };
   },
   methods: {
-    notify() {
-      if ("Notification" in window) {
-        this.requestPermissionNotification();
-        if (Notification.permission === "granted") {
-          this.sendNotification("hello", "ceci est un test");
-        } else if (Notification.permission === "denied") {
-          this.noAuthorizeNotification();
-        }
-      }
-    },
     postOnApi() {
       fetch("https://jsonplaceholder.typicode.com/posts", {
         method: "POST",
@@ -49,28 +38,23 @@ export default {
         }
       })
         .then(response => response.json(), (this.postCreated = true))
-        .then(json =>
-          this.sendNotification("Un nouvel article a été publié", json.title)
-        )
+        .then(json => {
+          this.sendNotification("Un nouvel article a été publié", json.title);
+        })
         .then(() =>
           setTimeout(() => {
             this.postCreated = false;
           }, 1000)
         );
     },
-    requestPermissionNotification() {
-      Notification.requestPermission();
-    },
     sendNotification(title, message) {
-      return new Notification(title, {
-        body: message,
-        icon: "https://pwa-vue.netlify.app/img/icons/android-chrome-192x192.png"
-      });
-    },
-    noAuthorizeNotification() {
-      alert(
-        "si vous voulez recevoir une notification, autoriser la notification dans les parametres de votre navigateur"
-      );
+      if ("Notification" in window && Notification.permission === "granted") {
+        new Notification(title, {
+          body: message,
+          icon:
+            "https://pwa-vue.netlify.app/img/icons/android-chrome-192x192.png"
+        });
+      }
     }
   }
 };
