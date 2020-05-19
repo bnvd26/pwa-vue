@@ -1,8 +1,10 @@
+import { Queue } from "workbox-background-sync";
+
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-// Register routes to put in cache 
+// Register routes to put in cache
 
 workbox.routing.registerRoute(
 	new RegExp("https://jsonplaceholder.typicode.com/(.*)"),
@@ -44,14 +46,12 @@ self.addEventListener("notificationclick", (event) => {
 
 // Background Sync
 
-workbox.routing.registerRoute(
-	"https://jsonplaceholder.typicode.com/posts",
-	workbox.strategies.networkOnly({
-		plugins: [
-			new workbox.backgroundSync.Plugin("postQueue", {
-				maxRetentionTime: 24 * 60,
-			}),
-		],
-	}),
-	"POST",
-);
+const queue = new Queue("postQueue");
+
+self.addEventListener("fetch", (event) => {
+	const promiseChain = fetch(event.request.clone()).catch((err) => {
+		return queue.pushRequest({ request: event.request });
+	});
+
+	event.waitUntil(promiseChain);
+});
