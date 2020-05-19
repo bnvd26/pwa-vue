@@ -2,8 +2,9 @@
   <div class="home">
     <h1>Ecrire un post</h1>
     <div v-if="postCreated">
-      <AlertFlashMessage />
+      <Spinner />
     </div>
+    <div v-if="msgCreated">Votre post à bien été crée</div>
     <label for="title">Title</label>
     <input type="text" name="title" id="title" required />
     <label for="body">Contenu</label>
@@ -13,15 +14,16 @@
 </template>
 
 <script>
-import AlertFlashMessage from "../components/AlertFlashMessage";
+import Spinner from "../components/Spinner";
 export default {
   name: "Home",
   components: {
-    AlertFlashMessage
+    Spinner
   },
   data() {
     return {
-      postCreated: false
+      postCreated: false,
+      msgCreated: false
     };
   },
   methods: {
@@ -39,12 +41,16 @@ export default {
       })
         .then(response => response.json(), (this.postCreated = true))
         .then(json => {
-          this.sendNotification("Un nouvel article a été publié", json.title);
+          this.sendNotification("Un nouvel article a été publié", json.title),
+            (this.postCreated = false),
+            setTimeout(() => {
+              this.msgCreated = true;
+            }, 100);
         })
         .then(() =>
           setTimeout(() => {
-            this.postCreated = false;
-          }, 1000)
+            this.msgCreated = false;
+          }, 2000)
         )
         .catch(err => {
           console.log("Unable to Post Data", err);
