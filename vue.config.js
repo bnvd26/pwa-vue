@@ -8,5 +8,9 @@ module.exports = {
 		manifestOptions: {
 			display: "fullscreen",
 		},
+		workboxPluginMode: "InjectManifest",
+		workboxOptions: {
+			swSrc: "src/service-worker.js",
+		},
 	},
 };
