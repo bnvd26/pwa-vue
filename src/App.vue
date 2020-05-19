@@ -4,7 +4,7 @@
       Vérifier votre connexion internet
       <img
         class="icon-network"
-        src="/img/network.png"
+        src="./assets/network.png"
         alt="icon-network"
       />
     </div>
