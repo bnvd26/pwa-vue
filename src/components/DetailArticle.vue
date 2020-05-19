@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     Article numéro {{ $route.params.id}}
+    <div v-if="post">{{post.title}}</div>
     <div>
       <input
         id="url"
@@ -27,8 +28,14 @@ export default {
   data: function() {
     return {
       isCopied: false,
-      sharing: null
+      sharing: null,
+      post: null
     };
+  },
+  created() {
+    fetch(`https://jsonplaceholder.typicode.com/posts/${this.$route.params.id}`)
+      .then(response => (this.state = response.json()))
+      .then(json => (this.post = json));
   },
   mounted: function() {
     // Verfy if current navigator support Web Share API
