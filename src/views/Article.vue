@@ -1,5 +1,8 @@
 <template>
-  <DetailArticle />
+ <DetailArticle>
+ 
+  </DetailArticle>
+    
 </template>
 
 <script>
