@@ -9,11 +9,11 @@ module.exports = {
 			display: "fullscreen",
 		},
 		iconPaths: {
-			favicon32: "images/icon/72x72.png",
-			favicon16: "images/icon/72x72.png",
-			appleTouchIcon: "images/icon/152x152.png",
-			maskIcon: "images/icon/72x72.png",
-			msTileImage: "images/icon/144x144.png",
+			favicon32: "img/icons/72x72.png",
+			favicon16: "img/icons/72x72.png",
+			appleTouchIcon: "img/icons/icon-152x152.png",
+			maskIcon: "img/icons/72x72.png",
+			msTileImage: "img/icons/144x144.png",
 		},
 		workboxPluginMode: "InjectManifest",
 		workboxOptions: {
