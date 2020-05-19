@@ -1,4 +1,5 @@
 <template>
+
   <div class="post">
    <Listing msg=" article " /> 
    <h2> TOUS NOS ARTICLES</h2>
@@ -33,11 +34,12 @@
 </template>
 
 <style>
-Listing{
-  float: Right;
-}
+
 .post{
   text-align: left;
+  width: 100%;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 .preview{
   margin-left: 100px;

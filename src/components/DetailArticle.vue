@@ -44,27 +44,22 @@
 <style>
 .article{
   width: 100%;
- /*  background: yellow; */
   margin-top:100px;
 }
   .articleContenaire{
     width: 100%;
-   /*  background:lightcoral; */
     display : flex;
     flex-direction: column;
     justify-content: center;
-
   }
   .imageHolder{
     width: 100%;
     display : flex;
     flex-direction: row;
-    justify-content: space-between;
-   
+    justify-content: space-between; 
   }
   .singleCar{
    margin-top: -20px;
-   
   }
 
   .deusCar{
