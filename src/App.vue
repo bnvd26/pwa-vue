@@ -1,6 +1,13 @@
 <template>
   <div id="app">
-    <div v-if="!online">Vérifier votre connexion internet</div>
+    <div v-if="!online" class="no-network">
+      Vérifier votre connexion internet
+      <img
+        class="icon-network"
+        src="/img/network.png"
+        alt="icon-network"
+      />
+    </div>
     <div id="nav">
       <router-link to="/">Home</router-link>|
       <router-link to="/posts">Post</router-link>|
@@ -55,5 +62,16 @@ export default {
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+.no-network {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-network {
+  margin-left: 5px;
+  width: 20px;
 }
 </style>
