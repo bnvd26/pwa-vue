@@ -12,7 +12,7 @@ module.exports = {
 			favicon32: "img/icons/72x72.png",
 			favicon16: "img/icons/72x72.png",
 			appleTouchIcon: "img/icons/icon-152x152.png",
-			maskIcon: "img/icons/72x72.png",
+			maskIcon: "img/icons/icon-72x72.png",
 			msTileImage: "img/icons/144x144.png",
 		},
 		workboxPluginMode: "InjectManifest",
