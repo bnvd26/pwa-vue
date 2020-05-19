@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <p @click="this.notify">Notify me</p>
+    <p>  it's working </p>
   </div>
 </template>
 
