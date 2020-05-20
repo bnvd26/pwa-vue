@@ -35,6 +35,7 @@
 	flex-direction: column;
   justify-content: center;
   padding: 30px;
+  margin-top: 100px;
 }
 
 .intro {
@@ -107,7 +108,8 @@ input {
 
 @media (min-width: 700px) {
 .hero {
-	display: flex; 
+	display: flex;
+  margin-top : -50px 
 }
 
 .intro{
