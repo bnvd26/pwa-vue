@@ -10,7 +10,7 @@ module.exports = {
 		},
 		iconPaths: {
 			favicon32: "img/icons/favicon-72x72.png",
-			favicon16: "img/icons/favicon-16x16",
+			favicon16: "img/icons/favicon-16x16.png",
 			appleTouchIcon: "img/icons/icon-152x152.png",
 			maskIcon: "img/icons/icon-72x72.png",
 			msTileImage: "img/icons/ms-icon-144x144.png",
