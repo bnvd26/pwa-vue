@@ -32,6 +32,7 @@
 .post span {
 	margin-top: 0;
 	margin-left: 0;
+	width: 50%;
 }
 .linkto {
 	margin-top: 20px;

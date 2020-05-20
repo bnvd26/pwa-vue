@@ -7,10 +7,10 @@
 
 <style>
 .post {
-	text-align: left;
-	width: 100%;
-	margin-left: 50%;
-	transform: translateX(-50%);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
 }
 </style>
 

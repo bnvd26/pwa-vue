@@ -11,38 +11,35 @@
 					</p>
 					<img alt="arrow" src="../assets/Arrow.svg" class="arrow" />
 				</div>
-       
 			</div>
-       <div class="interaction">
-          <img alt="arrow" src="../assets/home-image.png" class="imageIntro" />
-          <FormPost />
-        </div>
+			<div class="interaction">
+				<img alt="arrow" src="../assets/home-image.png" class="imageIntro" />
+				<FormPost />
+			</div>
 		</div>
-		
 	</div>
 </template>
 <style>
 .home {
-
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
 	width: 100%;
-  justify-content: center;
+	justify-content: center;
 }
 .hero {
 	display: flex;
 	flex-direction: column;
-  justify-content: center;
-  padding: 30px;
-  margin-top : 100px
+	justify-content: center;
+	padding: 30px;
+	margin-top: 100px;
 }
 
 .intro {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-  
+
 	text-align: left;
 }
 .linkTo {
@@ -53,13 +50,12 @@
 	align-self: center;
 }
 
-.interaction{
-  display : flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding-right: 30px ;
-  padding-bottom: 30px;
-  
+.interaction {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding-right: 30px;
+	padding-bottom: 30px;
 }
 h2 {
 	font-family: "Open Sans";
@@ -99,7 +95,8 @@ input {
 	font-weight: 300;
 	font-size: 15px;
 	line-height: 20px;
-	color: #ffffff;
+	color: black;
+	border-radius: 10px;
 }
 .arrow {
 	margin-top: -20px;
@@ -107,23 +104,19 @@ input {
 }
 
 @media (min-width: 700px) {
-
-.intro{
- width: 50%;
-}
-
+	.intro {
+		width: 50%;
+	}
 }
 @media (max-width: 700px) {
- .extract {
-   display: none;
- }
- .interaction{
-  display : flex;
-  flex-direction: column;
-  justify-content: space-around;
-
-  
-}
+	.extract {
+		display: none;
+	}
+	.interaction {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
 }
 </style>
 <script>
