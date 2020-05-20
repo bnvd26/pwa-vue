@@ -46,7 +46,7 @@ export default {
 	name: "CardArticle",
 	props: {
 		title: String,
-		body: String,
+		preview: String,
 		id: Number,
 	},
 };
