@@ -4,7 +4,7 @@
 			<CardArticle
 				v-bind:title="post.title"
 				v-bind:id="post.id"
-				v-bind:body="post.body"
+				v-bind:preview="post.preview"
 			></CardArticle>
 		</div>
 	</div>
