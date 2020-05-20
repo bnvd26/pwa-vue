@@ -3,23 +3,26 @@
 		<div v-if="post">
 			<div class="articleContenaire">
 				<h2>{{ post.title }}</h2>
-				<div class="imageHolder">
-					<div class="singleCar">
-						<img alt="arrow" src="../assets/image1.png" class="firstCar" />
-					</div>
+			<div class="largeScreen"> 
+          <div class="imageHolder">
+            <div class="singleCar">
+              <img alt="car" src="../assets/image1.png" class="firstCar" />
+              <img alt="car" src="../assets/image42.png" class="firstCarLarge" />
+            </div>
 
-					<div class="deusCar">
-						<div>
-							<img alt="arrow" src="../assets/image8.png" class="secondCar" />
-						</div>
-						<div>
-							<img alt="arrow" src="../assets/image7.png" class="thirdCar" />
-						</div>
-					</div>
-				</div>
-				<div class="textBox">
-					<p>{{ post.body }}</p>
-				</div>
+            <div class="deusCar">
+              <div>
+                <img alt="arrow" src="../assets/image8.png" class="secondCar" />
+              </div>
+              <div>
+                <img alt="arrow" src="../assets/image7.png" class="thirdCar" />
+              </div>
+            </div>
+          </div>
+          <div class="textBox">
+            <p>{{ post.body }}</p>
+          </div>
+        </div>
 			</div>
 
 			<ShareLink />
@@ -33,6 +36,7 @@
 				data-share-text="User vous partage cet article"
 			/>
 		</div>
+  
 	</div>
 </template>
 
@@ -65,6 +69,43 @@
 }
 .secondCar {
 	margin-bottom: 40px;
+}
+@media (max-width: 700px) {
+.firstCarLarge{
+    display: none; 
+  }
+}
+@media (min-width: 700px) {
+	.articleContenaire {
+	
+    
+	}
+  .largeScreen{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .firstCar{
+    display: none; 
+  }
+  .firstCarLarge{
+    display: block; 
+    height : 600px;
+    width: 600px;
+  }
+  
+  .textBox{
+    margin-top : 50%;
+    transform:translateY(-50%)
+  }
+  .deusCar{
+    flex-direction : row;
+    justify-content: space-around;
+  }
+  
+  .imageHolder{
+    flex-direction: column;
+  }
 }
 </style>
 

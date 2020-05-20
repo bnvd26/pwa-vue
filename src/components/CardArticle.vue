@@ -2,7 +2,7 @@
 	<div class="preview">
 		<div class="object">
 			<h3>{{ title }}</h3>
-			<p>{{ body }},</p>
+			<p >{{ body }},</p>
 			<p class="linkto">
 				<router-link :to="`/post/${id}`"> lire l'article</router-link>
 			</p>
@@ -39,6 +39,7 @@
 .linkto {
 	margin-top: 20px;
 }
+
 </style>
 
 <script>

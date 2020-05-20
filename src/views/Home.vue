@@ -5,11 +5,12 @@
         <h2>Reine de L’aventure</h2>
         <h3>le safari urbain</h3>
         <div class="linkTo">
-          <p>Article</p>
+          <p> <router-link :to="`/post/${id}`"> lire l'article</router-link></p> 
           <img alt="arrow" src="../assets/Arrow.svg" class="arrow" />
         </div>
         <img alt="arrow" src="../assets/home-image.png" class="imageIntro" />
       </div>
+      
     </div>
 
     <h2>Ecrire un post</h2>
@@ -25,9 +26,7 @@
   </div>
 </template>
 <style>
-@viewport {
-  width: device-width;
-}
+
 .home {
   background: #1b7ff3;
   display: flex;
@@ -82,7 +81,7 @@ h3 {
   letter-spacing: 0.07em;
   color: #ffffff;
 }
-p{
+p, a{
   margin-top: -10px;
   font-family: "Open Sans";
   font-style: normal;
@@ -104,6 +103,8 @@ label, input {
   margin-top: -20px;
   margin-left: 10px;
 }
+
+
 </style>
 <script>
 import Spinner from "../components/Spinner";
