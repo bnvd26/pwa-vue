@@ -22,7 +22,7 @@ export default {
 	},
 	props: {},
 	created() {
-		fetch("https://jsonplaceholder.typicode.com/posts")
+		fetch("https://my-json-server.typicode.com/benads/pwa-vue/posts")
 			.then((response) => response.json())
 			.then((json) => (this.posts = json));
 	},

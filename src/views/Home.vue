@@ -108,7 +108,7 @@ export default {
 		};
 	},
 	created() {
-		fetch(`https://jsonplaceholder.typicode.com/posts/1`)
+		fetch(`https://my-json-server.typicode.com/benads/pwa-vue/posts/1`)
 			.then((response) => (this.state = response.json()))
 			.then((json) => (this.post = json));
 	},

@@ -28,7 +28,7 @@ export default {
 	},
 	methods: {
 		postOnApi() {
-			fetch("https://jsonplaceholder.typicode.com/posts", {
+			fetch("https://my-json-server.typicode.com/benads/pwa-vue/posts", {
 				method: "POST",
 				body: JSON.stringify({
 					title: document.getElementById("title").value,
