@@ -76,10 +76,7 @@
   }
 }
 @media (min-width: 700px) {
-	.articleContenaire {
 	
-    
-	}
   .largeScreen{
     display: flex;
     flex-direction: row;
@@ -95,16 +92,22 @@
   }
   
   .textBox{
-    margin-top : 50%;
-    transform:translateY(-50%)
+    margin-top : 25%;
+   
   }
   .deusCar{
     flex-direction : row;
     justify-content: space-around;
+    margin-top: -10%;
   }
   
+  .articleContenaire h2{
+    margin-left: 5%;
+  }
   .imageHolder{
     flex-direction: column;
+    margin-left: 5%;
+    margin-top: -10%;
   }
 }
 </style>
