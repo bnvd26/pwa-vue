@@ -1,6 +1,7 @@
 <template>
 	<div class="article">
 		<div v-if="post">
+			<ClipboardLink />
 			<div class="articleContenaire">
 				<h2>{{ post.title }}</h2>
 				<div class="largeScreen">
@@ -30,7 +31,6 @@
 			</div>
 
 			<ShareLink />
-			<ClipboardLink />
 			<input
 				id="url"
 				type="hidden"
@@ -74,56 +74,50 @@
 	margin-bottom: 40px;
 }
 @media (max-width: 700px) {
-.firstCarLarge{
-    display: none; 
-  }
+	.firstCarLarge {
+		display: none;
+	}
 
-  .articleContenaire h2{
-
-    text-align: center;
-  }
-  .textBox{
-   
-    padding: 50px;
-   
-  }
-
+	.articleContenaire h2 {
+		text-align: center;
+	}
+	.textBox {
+		padding: 50px;
+	}
 }
 @media (min-width: 700px) {
-	
-  .largeScreen{
-    display: flex;
-    flex-direction: row;
-  }
+	.largeScreen {
+		display: flex;
+		flex-direction: row;
+	}
 
-  .firstCar{
-    display: none; 
-  }
-  .firstCarLarge{
-    display: block; 
-    height : 600px;
-    width: 600px;
-  }
-  
-  .textBox{
-    margin-top: 15%;
-    padding-right: 50px;
-   
-  }
-  .deusCar{
-    flex-direction : row;
-    justify-content: space-around;
-    margin-top: -10%;
-  }
-  
-  .articleContenaire h2{
-    margin-left: 5%;
-  }
-  .imageHolder{
-    flex-direction: column;
-    margin-left: 5%;
-    margin-top: -10%;
-  }
+	.firstCar {
+		display: none;
+	}
+	.firstCarLarge {
+		display: block;
+		height: 600px;
+		width: 600px;
+	}
+
+	.textBox {
+		margin-top: 15%;
+		padding-right: 50px;
+	}
+	.deusCar {
+		flex-direction: row;
+		justify-content: space-around;
+		margin-top: -10%;
+	}
+
+	.articleContenaire h2 {
+		margin-left: 5%;
+	}
+	.imageHolder {
+		flex-direction: column;
+		margin-left: 5%;
+		margin-top: -10%;
+	}
 }
 </style>
 
