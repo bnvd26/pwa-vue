@@ -5,7 +5,7 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 // Register routes to put in cache
 
 workbox.routing.registerRoute(
-	new RegExp("https://jsonplaceholder.typicode.com/(.*)"),
+	new RegExp("https://my-json-server.typicode.com/benads/pwa-vue/(.*)"),
 	new workbox.strategies.CacheFirst({
 		cacheName: "jsonplaceholder",
 		method: "GET",
@@ -45,7 +45,7 @@ self.addEventListener("notificationclick", (event) => {
 // Background Sync
 
 workbox.routing.registerRoute(
-	"https://jsonplaceholder.typicode.com/posts",
+	"https://my-json-server.typicode.com/benads/pwa-vue/posts",
 	workbox.strategies.networkOnly({
 		plugins: [
 			new workbox.backgroundSync.Plugin("postQueue", {
