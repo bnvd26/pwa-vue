@@ -35,7 +35,7 @@
 	flex-direction: column;
   justify-content: center;
   padding: 30px;
-  margin-top: 100px;
+  margin-top : 100px
 }
 
 .intro {
@@ -107,10 +107,6 @@ input {
 }
 
 @media (min-width: 700px) {
-.hero {
-	display: flex;
-  margin-top : -50px 
-}
 
 .intro{
  width: 50%;
@@ -141,7 +137,7 @@ export default {
 		};
 	},
 	created() {
-		fetch(`https://jsonplaceholder.typicode.com/posts/1`)
+		fetch(`https://my-json-server.typicode.com/benads/pwa-vue/posts/1`)
 			.then((response) => (this.state = response.json()))
 			.then((json) => (this.post = json));
 	},

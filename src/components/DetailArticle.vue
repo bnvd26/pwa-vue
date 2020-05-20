@@ -3,26 +3,30 @@
 		<div v-if="post">
 			<div class="articleContenaire">
 				<h2>{{ post.title }}</h2>
-			<div class="largeScreen"> 
-          <div class="imageHolder">
-            <div class="singleCar">
-              <img alt="car" src="../assets/image1.png" class="firstCar" />
-              <img alt="car" src="../assets/image42.png" class="firstCarLarge" />
-            </div>
+				<div class="largeScreen">
+					<div class="imageHolder">
+						<div class="singleCar">
+							<img alt="car" src="../assets/image1.png" class="firstCar" />
+							<img
+								alt="car"
+								src="../assets/image42.png"
+								class="firstCarLarge"
+							/>
+						</div>
 
-            <div class="deusCar">
-              <div>
-                <img alt="arrow" src="../assets/image8.png" class="secondCar" />
-              </div>
-              <div>
-                <img alt="arrow" src="../assets/image7.png" class="thirdCar" />
-              </div>
-            </div>
-          </div>
-          <div class="textBox">
-            <p>{{ post.body }}</p>
-          </div>
-        </div>
+						<div class="deusCar">
+							<div>
+								<img alt="arrow" src="../assets/image8.png" class="secondCar" />
+							</div>
+							<div>
+								<img alt="arrow" src="../assets/image7.png" class="thirdCar" />
+							</div>
+						</div>
+					</div>
+					<div class="textBox">
+						<p>{{ post.body }}</p>
+					</div>
+				</div>
 			</div>
 
 			<ShareLink />
@@ -36,7 +40,6 @@
 				data-share-text="User vous partage cet article"
 			/>
 		</div>
-  
 	</div>
 </template>
 
@@ -79,6 +82,11 @@
 
     text-align: center;
   }
+  .textBox{
+   
+    padding: 50px;
+   
+  }
 
 }
 @media (min-width: 700px) {
@@ -98,7 +106,8 @@
   }
   
   .textBox{
-    margin-top : 25%;
+    margin-top: 15%;
+    padding-right: 50px;
    
   }
   .deusCar{
@@ -134,7 +143,9 @@ export default {
 		};
 	},
 	created() {
-		fetch(`https://jsonplaceholder.typicode.com/posts/${this.$route.params.id}`)
+		fetch(
+			`https://my-json-server.typicode.com/benads/pwa-vue/posts/${this.$route.params.id}`,
+		)
 			.then((response) => (this.state = response.json()))
 			.then((json) => (this.post = json));
 	},
