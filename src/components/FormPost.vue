@@ -17,6 +17,11 @@
 	display: flex;
 	flex-direction: column;
 }
+
+.form button {
+	margin-top: 20px;
+	color: white;
+}
 </style>
 <script>
 import Spinner from "./Spinner";

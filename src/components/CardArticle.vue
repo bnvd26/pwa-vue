@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
  
 		<div class="preview">
 			<div class="object">
@@ -13,6 +14,17 @@
 			<div>
 				<img alt="arrow" src="../assets/slider-image.png" class="car" />
 			</div>
+=======
+	<div class="preview">
+		<div class="object">
+			<h3>{{ title }}</h3>
+			<p>{{ preview }},</p>
+			<p class="linkto">
+				<router-link :to="`/post/${id}`"> lire l'article</router-link>
+			</p>
+
+			<span></span>
+>>>>>>> 08902baf3e96961e4f75add5ecc1298cb3aec63d
 		</div>
 	
 </template>
@@ -43,7 +55,6 @@
 .linkto {
 	margin-top: 20px;
 }
-
 </style>
 
 <script>
@@ -51,7 +62,7 @@ export default {
 	name: "CardArticle",
 	props: {
 		title: String,
-		body: String,
+		preview: String,
 		id: Number,
 	},
 };

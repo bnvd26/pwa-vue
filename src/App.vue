@@ -81,10 +81,10 @@ export default {
   margin-right: 30%;
 }
 button {
-  background: #1b7ff3;
+  background:  #22c1c3;
   border: 1px solid rgba(27, 127, 243, 0.2);
   box-sizing: border-box;
-  box-shadow: 6px 6px 23px #2c87f3, -6px -6px 16px rgba(0, 94, 204, 0.33);
+ 
   width: 50px;
   height: 50px;
   border-radius: 50px;
