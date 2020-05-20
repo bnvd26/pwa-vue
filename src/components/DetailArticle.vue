@@ -74,6 +74,12 @@
 .firstCarLarge{
     display: none; 
   }
+
+  .articleContenaire h2{
+
+    text-align: center;
+  }
+
 }
 @media (min-width: 700px) {
 	

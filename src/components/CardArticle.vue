@@ -17,8 +17,8 @@
 
 <style>
 .preview {
-	margin-left: 100px;
-	margin-bottom: 50px;
+	justify-content: center;
+	padding: 20px;
 }
 .first,
 .second {

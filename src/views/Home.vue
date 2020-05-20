@@ -4,17 +4,21 @@
 			<div class="intro" v-if="post">
 				<h2>{{ post.title }}</h2>
 				<h3>le safari urbain</h3>
-				<p>{{ post.body }}</p>
+				<p class="extract">{{ post.body }}</p>
 				<div class="linkTo">
 					<p>
 						<router-link :to="`/post/${post.id}`"> lire l'article</router-link>
 					</p>
 					<img alt="arrow" src="../assets/Arrow.svg" class="arrow" />
 				</div>
-				<img alt="arrow" src="../assets/home-image.png" class="imageIntro" />
+       
 			</div>
+       <div class="interaction">
+          <img alt="arrow" src="../assets/home-image.png" class="imageIntro" />
+          <FormPost />
+        </div>
 		</div>
-		<FormPost />
+		
 	</div>
 </template>
 <style>
@@ -24,21 +28,20 @@
 	flex-direction: column;
 	height: 100vh;
 	width: 100%;
+  justify-content: center;
 }
 .hero {
-	/* margin-top: -800px; */
-	/* background:greenyellow; */
 	display: flex;
 	flex-direction: column;
-	margin-left: 12%;
+  justify-content: center;
+  padding: 30px;
 }
 
 .intro {
-	/* background: red; */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 30px;
+  
 	text-align: left;
 }
 .linkTo {
@@ -46,12 +49,17 @@
 	flex-direction: row;
 }
 .imageIntro {
-	height: 500px;
-	width: 500px;
-	margin-left: -20px;
 	align-self: center;
 }
 
+.interaction{
+  display : flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-right: 30px ;
+  padding-bottom: 30px;
+  
+}
 h2 {
 	font-family: "Open Sans";
 	font-style: normal;
@@ -95,6 +103,29 @@ input {
 .arrow {
 	margin-top: -20px;
 	margin-left: 10px;
+}
+
+@media (min-width: 700px) {
+.hero {
+	display: flex; 
+}
+
+.intro{
+ width: 50%;
+}
+
+}
+@media (max-width: 700px) {
+ .extract {
+   display: none;
+ }
+ .interaction{
+  display : flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  
+}
 }
 </style>
 <script>

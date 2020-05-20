@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="form">
 		<h2>Ecrire un post</h2>
 		<div v-if="postCreated">
 			<Spinner />
@@ -12,7 +12,12 @@
 		<button @click="this.postOnApi">Envoyer</button>
 	</div>
 </template>
-
+<style>
+.form{
+	display: flex;
+	flex-direction: column;
+}
+</style>
 <script>
 import Spinner from "./Spinner";
 export default {

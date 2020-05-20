@@ -66,6 +66,7 @@ export default {
   width: 100%;
   margin-left: 50%;
   transform: translateX(-50%);
+  overflow-x: hidden;
 }
 
 .header {
@@ -132,5 +133,10 @@ span {
 .icon-network {
   margin-left: 5px;
   width: 20px;
+}
+@media (min-width: 700px) {
+#nav {
+  margin-left : 25%
+}
 }
 </style>
