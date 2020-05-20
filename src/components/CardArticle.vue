@@ -1,24 +1,28 @@
 <template>
-	<div class="preview">
-		<div class="object">
-			<h3>{{ title }}</h3>
-			<p >{{ body }},</p>
-			<p class="linkto">
-				<router-link :to="`/post/${id}`"> lire l'article</router-link>
-			</p>
-			
-			<span></span>
+ 
+		<div class="preview">
+			<div class="object">
+				<h3>{{ title }}</h3>
+				<p >{{ body }},</p>
+				<p class="linkto">
+					<router-link :to="`/post/${id}`"> lire l'article</router-link>
+				</p>
+				
+				<span></span>
+			</div>
+			<div>
+				<img alt="arrow" src="../assets/slider-image.png" class="car" />
+			</div>
 		</div>
-		<div>
-			<img alt="arrow" src="../assets/slider-image.png" class="car" />
-		</div>
-	</div>
+	
 </template>
 
 <style>
+
 .preview {
 	justify-content: center;
 	padding: 20px;
+	
 }
 .first,
 .second {

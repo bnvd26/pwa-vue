@@ -23,7 +23,7 @@
 </template>
 <style>
 .home {
-	background: #1b7ff3;
+
 	display: flex;
 	flex-direction: column;
 	height: 100vh;

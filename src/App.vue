@@ -67,6 +67,8 @@ export default {
   margin-left: 50%;
   transform: translateX(-50%);
   overflow-x: hidden;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(27,127,243,1) 100%);
 }
 
 .header {
