@@ -3,7 +3,7 @@
 		<p @click="this.copyLink" class="center">Copier le lien</p>
 	</div>
 	<div v-else>
-		<p>Element copié</p>
+		<p class="center">Element copié</p>
 	</div>
 </template>
 

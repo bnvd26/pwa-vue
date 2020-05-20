@@ -2,6 +2,7 @@
 	<div class="article">
 		<div v-if="post">
 			<ClipboardLink />
+			<ShareLink />
 			<div class="articleContenaire">
 				<h2>{{ post.title }}</h2>
 				<div class="largeScreen">
@@ -29,8 +30,6 @@
 					</div>
 				</div>
 			</div>
-
-			<ShareLink />
 			<input
 				id="url"
 				type="hidden"
