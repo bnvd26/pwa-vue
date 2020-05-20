@@ -12,7 +12,7 @@
       </div>
     </div>
 
-    <h1>Ecrire un post</h1>
+    <h2>Ecrire un post</h2>
     <div v-if="postCreated">
       <Spinner />
     </div>
@@ -82,8 +82,17 @@ h3 {
   letter-spacing: 0.07em;
   color: #ffffff;
 }
-p {
+p{
   margin-top: -10px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+label, input {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 300;

@@ -4,8 +4,9 @@
 			<h3>{{ title }}</h3>
 			<p>{{ body }},</p>
 			<p class="linkto">
-				<router-link :to="`/post/${id}`">lire l'article</router-link>
+				<router-link :to="`/post/${id}`"> lire l'article</router-link>
 			</p>
+			
 			<span></span>
 		</div>
 		<div>
